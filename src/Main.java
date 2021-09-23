@@ -34,7 +34,7 @@ public class Main {
                 book6, book7, book8, book9, book10
         };
         System.out.println(getTotal(listBook));
-        System.out.println(getBookJava(listBook));
+        System.out.println(getBookByName(listBook, "java"));
     }
     public static int getTotal(Book[] arr) {
         int total = 0;
@@ -43,11 +43,11 @@ public class Main {
         }
         return total;
     }
-    public static int getBookJava(Book[] arr) {
+    public static int getBookByName(Book[] arr, String a) {
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] instanceof ProgrammingBook) {
-               if (((ProgrammingBook) arr[i]).getLanguage().equals("java")) {
+               if (((ProgrammingBook) arr[i]).getLanguage().equals(a)) {
                    count++;
                }
             }
